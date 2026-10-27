@@ -1,0 +1,18 @@
+[
+    {
+        "birthday": "1995-03-15",
+        "firstName": "Anna",
+        "lastName": "Müller",
+        "sex": "FEMALE",
+        "weight": 65,
+        "height": 1.7
+    },
+    {
+        "birthday": "1985-07-20",
+        "firstName": "Peter",
+        "lastName": "Meier",
+        "sex": "MALE",
+        "weight": 85,
+        "height": 1.82
+    }
+]
