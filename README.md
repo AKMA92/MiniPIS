@@ -38,7 +38,7 @@ The program also imports the JSON files and displays the number of imported doct
 
 The following screenshot shows the program output in the terminal.
 
-![MiniPIS Terminal Output](Result.png)
+![MiniPIS Terminal Output](src/Result.png)
 
 ---
 
