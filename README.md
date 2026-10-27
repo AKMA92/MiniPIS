@@ -1,5 +1,29 @@
-# MiniPIS
+## My Implementation
 
+I extended the MiniPIS project with the following features:
+
+- **Doctor:** Added employment validation and email address with Regex validation.
+- **Patient:** Created a new class with height, weight, birth date, calculated age and sex.
+- **Person:** Created a superclass for Doctor and Patient to reuse common attributes and methods.
+- **Appointment:** Created a class for appointments between doctors and patients.
+- **Data Analysis:** Calculated the average weight and height of patients.
+- **CSV Export:** Exported doctor and patient data into separate CSV files.
+- **Demo Data:** Created sample doctors, patients and appointments.
+
+## How to Run
+
+Run `MiniPIS.java` to start the application.
+
+The program creates sample data, calculates statistics and exports two CSV files:
+
+- `doctors.csv`
+- `patients.csv`
+
+## Example Output
+![MiniPIS Terminal Output](Result.png)
+
+
+# Project MiniPIS
 A playground for developing a simple Patient Information System (PIS), sometimes also called "Practice Information System".
 
 MiniPIS is very simplistic:

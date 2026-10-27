@@ -17,48 +17,32 @@ enum Speciality {
     }
 }
 
-public class Doctor {
-    private String firstName; // prename
-    private String lastName; // surname, family name
-    private int employmentLevel; // in percent
+public class Doctor extends Person {
+
+    private int employment; // in percent
     private Speciality speciality = Speciality.GP;
+    private String email;
 
     private static final int WEEKLYWORKINGHOURS = 42;
 
     public Doctor(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName; 
-        employmentLevel = 100;
+        super(firstName, lastName);
+        employment = 100;
     }
 
     public Doctor(String firstName, String lastName, int employment) {
-        this.firstName = firstName;
-        this.lastName = lastName; 
-        this.employmentLevel = employment;
+        super(firstName, lastName);
+        setEmployment(employment);
     }
 
-    public String getFirstName() {
-        return firstName; 
+        public int getEmployment() {
+        return employment;
     }
 
-    public void setFirstName(String prename) {
-        this.firstName = prename;
-    }
-
-    public String getLastName() {
-        return lastName; 
-    }
-
-    public void setLasttName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getEmployment() {
-        return employmentLevel;
-    }
-
-    public String fullName() {
-        return firstName + " " + lastName;
+    public void setEmployment(int employment){
+        if (employment >= 10 && employment <= 100) {
+            this.employment = employment;
+        }
     }
 
     public Speciality getSpeciality() {
@@ -74,7 +58,7 @@ public class Doctor {
     }
 
     public boolean worksFullTime() {
-        if (employmentLevel >= 100) {
+        if (employment >= 100) {
             return true;
         }else {
             return false;
@@ -82,6 +66,21 @@ public class Doctor {
     }
 
     public float workingHoursPerWeek() {
-        return (float)employmentLevel / 100.0f * (float)WEEKLYWORKINGHOURS;
+        return (float)employment / 100.0f * (float)WEEKLYWORKINGHOURS;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        if (email != null &&
+            email.matches("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")){
+                this.email = email;
+            }else{
+                System.out.println("Ungültige E-Mail-Adresse");
+
+            }
+         
     }
 }   
