@@ -53,6 +53,15 @@ class MiniPIS {
     private static void processData() {
         CSV.exportDoctors(doctors);
         CSV.exportPatients(patients);
+
+        JSON.export(doctors, "doctors.json");
+        JSON.exportPatients(patients, "patients.json");
+
+        ArrayList<Doctor> importedDoctors = JSON.importDoctors("doctors.json");
+        ArrayList<Patient> importedPatients = JSON.importPatients("patients.json");
+
+        System.out.println("Importierte Ärzte: " + importedDoctors.size());
+        System.out.println("Importierte Patienten: " + importedPatients.size());
     }
 
     private static void analyseData() {
